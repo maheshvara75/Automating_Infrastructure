@@ -40,6 +40,7 @@ Step 2: Provisioning Infrastructure with Terraform
 Step 3: Configuration Management with Ansible Playbook and Inventory file
 
 Step 4: CI/CD Pipeline with Jenkins
+
        1.	Configure Jenkins:
             o	Install necessary plugins: Git, Ansible, Terraform.
             o	Set up credentials for GitHub and AWS in Jenkins.
