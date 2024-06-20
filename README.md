@@ -33,8 +33,11 @@ Table of Contents
 # Implementation Steps
 Step 1: Setup GitHub Repository
       o	Create a new repository in GitHub and Clone the repository to your local machine.
+
 Step 2: Provisioning Infrastructure with Terraform       
+
 Step 3: Configuration Management with Ansible Playbook and Inventory file
+
 Step 4: CI/CD Pipeline with Jenkins
        1.	Configure Jenkins:
             o	Install necessary plugins: Git, Ansible, Terraform.
