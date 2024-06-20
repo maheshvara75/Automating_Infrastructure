@@ -37,7 +37,7 @@ pipeline {
             }
         }
         stages {
-        stage('Running Ansible Playbook to Setup' JAVA - PYTHON - JENKINS) {
+        stage('Running Ansible Playbook to Setup JAVA - PYTHON - JENKINS') {
             steps {
                 dir('ansible') {
                     sh 'ansible-playbook -i inventory playbook.yaml --private-key=../terraform/ec2pro4_pem'
