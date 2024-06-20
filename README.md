@@ -44,14 +44,18 @@ Step 4: CI/CD Pipeline with Jenkins
             o	Set up credentials for GitHub and AWS in Jenkins.
             o	Create a new pipeline job in Jenkins and link it to the GitHub repository.
             o	Configure the pipeline script to use the Jenkinsfile from the repository.
+            
        2.	Trigger the Pipeline:
             o	Run the pipeline from Jenkins.
             o	Monitor the stages: Terraform initialization, planning, manual approval, application.
             o	Retrieve EC2 Instance Details (public IP of the EC2 instance) from the output to easy access.
+            
        3.	Establish Secure Connection to EC2 Instance:
             o	Use the generated key pair to connect to the EC2 instance via SSH
+            
        4.	Configure Ansible Inventory:
             o	Inventory File: Create an inventory file to specify the EC2 instance details for Ansible to manage.
+            
        5.	Execute Ansible Playbook:
             o	Run the Ansible playbook to configure the EC2 instance with Jenkins, Java, and Python.
 
