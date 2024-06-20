@@ -36,7 +36,6 @@ pipeline {
                 }
             }
         }
-        stages {
         stage('Running Ansible Playbook to Setup JAVA - PYTHON - JENKINS') {
             steps {
                 dir('ansible') {
@@ -44,6 +43,5 @@ pipeline {
                 }
             }
         }
-    }
     }
 }
