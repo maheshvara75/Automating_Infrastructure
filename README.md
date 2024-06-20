@@ -6,10 +6,10 @@ Table of Contents
 3.	Project Overview
 4.	Prerequisites
 5.	Implementation Steps
-   o	Setup GitHub Repository 
-   o	Provisioning Infrastructure with Terraform
-   o	Configuration Management with Ansible
-   o	CI/CD Pipeline with Jenkins
+         o	Setup GitHub Repository 
+         o	Provisioning Infrastructure with Terraform
+         o	Configuration Management with Ansible
+         o	CI/CD Pipeline with Jenkins
 6.	Conclusion
 
 # Introduction
