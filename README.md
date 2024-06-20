@@ -33,7 +33,7 @@ Table of Contents
 # Implementation Steps
 
 Step 1: Setup GitHub Repository
-      o	Create a new repository in GitHub and Clone the repository to your local machine.
+            o	Create a new repository in GitHub and Clone the repository to your local machine.
 
 Step 2: Provisioning Infrastructure with Terraform       
 
