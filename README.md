@@ -32,57 +32,26 @@ Table of Contents
  
 # Implementation Steps
 Step 1: Setup GitHub Repository
-       1.	Create a new repository in GitHub (e.g., Automating_Infrastructure).
-       2.	Clone the repository to your local machine:
-Step 2: Provisioning Infrastructure with Terraform
-       1.	Directory Structure:
-           Automating_Infrastructure/
-           ├── ansible/
-           │   ├── playbook.yaml
-           │   └── inventory
-           ├── terraform/
-           │   ├── main.tf
-           │   ├── variables.tf
-           │   ├── outputs.tf
-           │   └── terraform.tfvars
-           ├── Jenkinsfile
-           └── README.md
-       2.	terraform/main.tf:
-
-       3.	terraform/variables.tf:
-       
-       4.	terraform/outputs.tf:
-
-       5.	terraform/terraform.tfvars:
-
-Step 3: Configuration Management with Ansible
-       
-       1.	ansible/playbook.yaml:
-       
-       2.	ansible/inventory:
+      o	Create a new repository in GitHub and Clone the repository to your local machine.
+Step 2: Provisioning Infrastructure with Terraform       
+Step 3: Configuration Management with Ansible Playbook and Inventory file
 Step 4: CI/CD Pipeline with Jenkins
-
        1.	Configure Jenkins:
-   o	Install necessary plugins: Git, Ansible, Terraform.
-   o	Set up credentials for GitHub and AWS in Jenkins.
-   o	Create a new pipeline job in Jenkins and link it to the GitHub repository.
-   o	Configure the pipeline script to use the Jenkinsfile from the repository.
-Jenkinsfile:
+            o	Install necessary plugins: Git, Ansible, Terraform.
+            o	Set up credentials for GitHub and AWS in Jenkins.
+            o	Create a new pipeline job in Jenkins and link it to the GitHub repository.
+            o	Configure the pipeline script to use the Jenkinsfile from the repository.
+       2.	Trigger the Pipeline:
+            o	Run the pipeline from Jenkins.
+            o	Monitor the stages: Terraform initialization, planning, manual approval, application.
+            o	Retrieve EC2 Instance Details (public IP of the EC2 instance) from the output to easy access.
+       3.	Establish Secure Connection to EC2 Instance:
+            o	Use the generated key pair to connect to the EC2 instance via SSH
+       4.	Configure Ansible Inventory:
+            o	Inventory File: Create an inventory file to specify the EC2 instance details for Ansible to manage.
+       5.	Execute Ansible Playbook:
+            o	Run the Ansible playbook to configure the EC2 instance with Jenkins, Java, and Python.
 
-3.	Trigger the Pipeline:
-  o	Run the pipeline from Jenkins.
-  o	Monitor the stages: Terraform initialization, planning, manual approval, application.
-  o	Retrieve EC2 Instance Details (public IP of the EC2 instance) from the output to easy access.
- 
-4.	Establish Secure Connection to EC2 Instance:
-  o	Use the generated key pair to connect to the EC2 instance via SSH
-
-5.	Configure Ansible Inventory:
-  o	Inventory File: Create an inventory file to specify the EC2 instance details for Ansible to manage.
- 
-6.	Execute Ansible Playbook:
-  o	Run the Ansible playbook to configure the EC2 instance with Jenkins, Java, and Python.
-
-Conclusion
-The project "Automating Infrastructure using Terraform" demonstrates a systematic method to automate infrastructure provisioning and configuration using Terraform and Ansible, maintaining IaC in GitHub for version control and Jenkins for CI/CD automation. This approach ensures repeatable and efficient management of infrastructure, aligning with best practices in DevOps.
+# Conclusion
+      The project "Automating Infrastructure using Terraform" demonstrates a systematic method to automate infrastructure provisioning and configuration using Terraform and Ansible, maintaining IaC in GitHub for version control and Jenkins for CI/CD automation. This approach ensures repeatable and efficient management of infrastructure, aligning with best practices in DevOps.
 
