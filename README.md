@@ -31,6 +31,7 @@ Table of Contents
 3.	AWS Account: Ensure you have access keys and necessary permissions to create resources.
  
 # Implementation Steps
+
 Step 1: Setup GitHub Repository
       o	Create a new repository in GitHub and Clone the repository to your local machine.
 
