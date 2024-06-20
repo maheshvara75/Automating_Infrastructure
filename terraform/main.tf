@@ -30,7 +30,7 @@ resource "local_file" "private_key" {
   filename = var.key_name
   file_permission = "400"
   }
-  
+
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
   description = "Allow SSH inbound traffic"
@@ -40,6 +40,12 @@ resource "aws_security_group" "allow_ssh" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
@@ -54,10 +60,10 @@ resource "aws_instance" "jenkins" {
   key_name      = aws_key_pair.key_pair.key_name
 
   tags = {
-    Name = "Jenkins-Server"
+    Name = "project1-ec2-instance"
   }
 
-  provisioner "local-exec" {
+provisioner "local-exec" {
     command = "echo '${self.public_ip}' > ../ansible/inventory"
   }
 }
